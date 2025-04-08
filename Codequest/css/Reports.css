@@ -1,0 +1,250 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+}
+
+body {
+    background-color: #F5FAFF;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 240px auto 17em;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+        "navbar header aside"
+        "navbar section aside"
+        "navbar main aside";
+}
+
+/* Sidebar/NavBar */
+nav {
+    height: 1vh;
+    grid-area: navbar;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    background-color: #eaf2fb;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar .logo {
+    width: 100px;
+    margin-bottom: 50px;
+}
+
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.sidebar ul li {
+    list-style: none;
+}
+
+.sidebar ul li a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2px;
+    text-decoration: none;
+    color: #045396;
+    padding: 20px;
+    transition: 0.3s;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #0056b3;
+    opacity: 0.9;
+    color: #FDF13E;
+}
+
+.nav-link.active {
+    background: #0056b3;
+    color: #FDF13E;
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+/* Layout Sections */
+header {
+    grid-area: header;
+    padding: 1em;
+}
+
+header h1 {
+    margin-top: 20px;
+    margin-left: 30px;
+    color: #1773B8;
+}
+
+section {
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-right: 20px;
+    grid-area: section;
+}
+
+main {
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+    background-color: #eaf2fb;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Reports Section */
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1773B8;
+}
+
+/* Updated Report Container & Layout */
+.report-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 200px;
+    width: 100%;
+    margin: 30px 80px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+}
+
+.reports-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #1773B8;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.report-graph {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.graph-img {
+    width: 100%;
+    max-width: 300px;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc; /* Added border for the pie chart */
+}
+
+.reports {
+    text-align: left;
+}
+
+.report-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.report-item {
+    background-color: #f8faff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+    transition: 0.2s ease;
+    border: 1px solid #ddd; /* Added border for the report items */
+}
+
+.report-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.report-item h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #000;
+}
+
+.report-item a {
+    font-size: 14px;
+    color: #234a94;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.report-item a i {
+    margin-right: 6px;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1200px) {
+    body {
+        grid-template-columns: 200px auto 15em;
+    }
+
+    .report-container {
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .graph-img {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "navbar"
+            "header"
+            "section"
+            "main";
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .report-container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .graph-img {
+        max-width: 100%;
+    }
+
+    .report-list {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reports Tab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Reports.css">
+</head>
+
+<body>
+    <nav>
+        <div class="sidebar">
+            <img src="../ImageResources/_Logo.png" class="logo">
+            <ul>
+                <li><a href="../html/newDashboard.html" class="nav-link"><img src="../ImageResources/chartblue.png" class="icon"> DASHBOARD </a></li>
+                <li><a href="#" class="nav-link"><img src="../ImageResources/bookmark_manager.png" class="icon"> MANAGEQUESTS </a></li>
+                <li><a href="../html/StudentManagement.html" class="nav-link"><img src="../ImageResources/accountBlue.png" class="icon"> STUDENT MANAGEMENT </a></li>
+                <li><a href="#" class="nav-link"><img src="../ImageResources/archiveBlue.png" class="icon"> STUDENT ARCHIVE </a></li>
+                <li><a href="#" class="nav-link active"><img src="../ImageResources/flagYellow.png" class="icon"> Report </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section>
+        <h1 class="title">Student Management</h1>
+        <div class="report-container">
+            <h2 class="reports-title">REPORTS</h2>
+            <div class="report-graph">
+                <img src="../ImageResources/piechart.png" alt="Pie Chart" class="graph-img">
+            </div>
+            <div class="reports">
+                <div class="report-list">
+                    <div class="report-item">BT–201<br><a href="#">📥 Download Reports</a></div>
+                    <div class="report-item">BT–203<br><a href="#">📥 Download Reports</a></div>
+                    <div class="report-item">BT–204<br><a href="#">📥 Download Reports</a></div>
+                    <div class="report-item">BT–206<br><a href="#">📥 Download Reports</a></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="loader-wrapper">
+        <span class="loader-1"></span>
+    </div>
+    
+    <style>
+        .loader-wrapper {
+            width: 100%;
+            height: 100%;
+            position: fixed; /* Use fixed to cover the entire screen */
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white; /* Add transparency for better visibility */
+            z-index: 9999; /* Ensure it stays on top of other content */
+        }
+    
+        .loader-1 {
+            width: 48px;
+            height: 48px;
+            border: 5px solid rgba(255, 255, 255, 0.16); /* Slightly transparent */
+            border-bottom-color: #1773B8;
+            border-radius: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+        }
+    
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(window).on("load", function () {
+        $(".loader-wrapper").fadeOut(1000, function () { 
+            $(this).remove(); 
+        });
+    });
+    </script>
+</body>
+
+</html>

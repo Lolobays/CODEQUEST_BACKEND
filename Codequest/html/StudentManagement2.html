@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Student Management</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/StudentManagement2.css">
+</head>
+
+<body>
+
+    <!-- Sidebar Navigation -->
+    <nav>
+        <div class="sidebar">
+            <img src="../ImageResources/_Logo.png" class="logo">
+            <ul>
+                <li><a href="../html/newDashboard.html" class="nav-link"><img src="../ImageResources/chartYellow.png" class="icon"> DASHBOARD</a>
+                </li>
+                <li><a href="#" class="nav-link"><img src="../ImageResources/bookmark_manager.png" class="icon"> MANAGEQUESTS</a></li>
+                <li><a href="../html/StudentManagement.html" class="nav-link active"><img src="../ImageResources/accountYellow.png"class="icon"> STUDENT MANAGEMENT</a></li>
+                <li><a href="#" class="nav-link"><img src="icons/archive.png" class="icon"> STUDENT ARCHIVE</a></li>
+                <li><a href="#" class="nav-link logout"><img src="icons/logout.png" class="icon"> LOG OUT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <h1 class="title">Student Management</h1>
+
+        <!-- Student Profile Section -->
+        <div class="student-profile">
+            <h2 id="studentName">Shaun Edwards C. Dela Rosa</h2>
+            <div class="profile-details">
+                <label>Username:</label>
+                <input type="text" id="usernameField" readonly>
+
+                <label>Password:</label>
+                <input type="text" id="passwordField" readonly>
+
+                <label>Section:</label>
+                <input type="text" id="sectionField" readonly>
+            </div>
+            <div class="buttons">
+                <button class="edit-btn">Edit Details</button>
+                <button class="delete-btn">Delete Account</button>
+            </div>
+        </div>
+
+        <!-- Student Performance Section -->
+        <div class="student-performance">
+            <h2>Student Performance</h2>
+            <table>
+                <tr>
+                    <th>Activities</th>
+                    <th>Submitted</th>
+                    <th>Time Taken</th>
+                    <th>Score</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>01 Hands-On 1</td>
+                    <td>✔</td>
+                    <td>45:00</td>
+                    <td>50/50</td>
+                    <td><button class="edit-score-btn">Edit</button></td>
+                </tr>
+                <tr>
+                    <td>01 Quiz 1</td>
+                    <td>❌</td>
+                    <td>00:00</td>
+                    <td>?/10</td>
+                    <td><button class="edit-score-btn">Edit</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Student Assessment Section -->
+        <div class="student-assessment">
+            <h2>Student Assessment</h2>
+            <table>
+                <tr>
+                    <th>Skill</th>
+                    <th>Current Progress</th>
+                    <th>Strengths</th>
+                    <th>Areas for Improvement</th>
+                </tr>
+                <tr>
+                    <td>Problem Solving</td>
+                    <td>50%</td>
+                    <td>Debugging</td>
+                    <td>Algorithm</td>
+                </tr>
+                <tr>
+                    <td>Coding Speed</td>
+                    <td>70%</td>
+                    <td>Writing Code</td>
+                    <td>Reducing Errors</td>
+                </tr>
+                <tr>
+                    <td>Object-Oriented Programming</td>
+                    <td>60%</td>
+                    <td>Inheritance</td>
+                    <td>Polymorphism</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let studentData = localStorage.getItem("selectedStudent");
+
+            if (studentData) {
+                let student = JSON.parse(studentData);
+
+                document.getElementById("studentName").textContent = student.fullName;
+                document.getElementById("usernameField").value = student.username; 
+                document.getElementById("passwordField").value = student.password; 
+                document.getElementById("sectionField").value = student.section; 
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

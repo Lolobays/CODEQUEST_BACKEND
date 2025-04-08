@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeQuest: Admin Portal</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/admin_Design.css">
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js"></script>
+
+    <script type="module" src="../js/login.js" defer></script>
+</head>
+
+<body>
+
+    <div class="square">
+        <div class="toptitle">
+            <img src="../ImageResources/_Logo.png" alt="CodeQuest Logo">
+            <h1><span class="first-part">Code</span><span class="second-part">Quest</span></h1>
+        </div>
+
+        <div class="form">
+            <h3>Admin Portal Login</h3>
+            <form id="loginForm" onsubmit="return false;">
+                <div class="input-container">
+                    <input type="email" id="email" placeholder="Email" autocomplete="off" required>
+                </div>
+                <div class="input-container">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <img src="../ImageResources/_Hide.png" id="togglePassword" alt="Show/Hide Password" onclick="togglePasswordVisibility()">
+                </div>
+                <div class="centerbutton">
+                    <button id="buttonLogin" type="submit">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

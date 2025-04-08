@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: #333;
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: 
+        "navbar header aside"
+        "navbar section aside"
+        "navbar main aside";
+        grid-template-columns: 240px auto 17em;
+        grid-template-rows: auto auto 1fr;
+}
+
+header{
+    grid-area: header;
+    padding: 1em;
+}
+
+header h1{
+    margin-top: 20px;
+    margin-left: 30px;
+    color: #1773B8;
+}
+
+nav{
+    height: 1vh;
+    grid-area: navbar;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+section{
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-right: 20px;
+    grid-area: section;
+}
+
+    main{
+        margin-left: 30px;
+        margin-top: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        grid-area: main;  
+    }
+
+
+
+aside{
+    grid-area: aside;
+    background-color: #eaf2fb;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/*Naviation Links*/
+.sidebar {
+    background-color: #eaf2fb;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar .logo {
+    width: 100px;
+    margin-bottom: 50px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center; /* Vertically center items */
+    justify-content: center;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}   
+
+.sidebar ul li{
+    list-style: none;
+}
+
+.sidebar ul li a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2px;
+    text-decoration: none;
+    color: #045396;
+    padding: 20px;
+    transition: 0.3s;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.nav-link.active {
+    background: #0056b3;
+    color: #FDF13E;
+}
+
+.sidebar ul li a:hover{
+    background-color: #0056b3;
+    opacity: 0.01;
+    color: 0056b3;
+}
+
+/*Stats*/
+
+.dashboard-stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.stat-box {
+    background-color: #1773B8;
+    padding: 20px;
+    border-radius: 15px;
+    width: 250px;
+    min-width: 150px;
+    text-align: left;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    height: auto; /* Ensure box height adjusts based on content */
+}
+
+.stat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Keep items centered vertically */
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    height: 40px; /* Set a fixed height for the header */
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #FDF13E;
+}
+
+.dashboard-stats .icon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+/*Activities Box*/
+.Activity-Body{
+    min-height: 100%;
+    background-color: 045396;
+    border-radius: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.Activities-Box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100%;
+    min-height: 15%;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.Activities-Box h2{
+    color: #045396;
+    font-weight: 500;
+}
+
+.Toggle-Group {
+    display: flex;
+    background: #1773B8;
+    border-radius: 10px;
+    padding: 5px;
+    width: fit-content;
+}
+
+.Toggle-Buttons {
+    border: none;
+    background: transparent;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.Toggle-Buttons.Active {
+    background-color: #FDF13E;
+    color: #1773B8;
+    font-weight: bold;
+}
+
+.aside-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+.progress-box{
+    margin-top: 44px;
+    background-color: white;
+    color: #045396;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
+.given-task{
+    background-color: white;
+    color: #045396;
+    padding: 20px;
+    width: 200px;
+    height: 350px;
+    border-radius: 10px;  
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+
+

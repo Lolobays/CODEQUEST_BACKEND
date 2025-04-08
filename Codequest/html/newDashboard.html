@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CodeQuest: Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/new_DashBoardDesign.css">
+</head>
+
+<body>
+    <header>
+        <h1>Dashboard</h1>
+    </header>
+
+    <nav>
+        <div class="sidebar">
+            <img src="../ImageResources/_Logo.png" class="logo">
+            <ul>
+                <li><a href="#" class="nav-link active"><img src="../ImageResources/chartYellow.png" class="icon"> DASHBOARD </a></li>
+                <li><a href="#" class="nav-link"><img src="../ImageResources/bookmark_manager.png" class="icon"> MANAGEQUESTS </a></li>
+                <li><a href="../html/StudentManagement.html" class="nav-link"><img src="../ImageResources/accountBlue.png"class="icon"> STUDENT MANAGEMENT </a></li>
+                <li><a href="../html/StudentArchive.html" class="nav-link"><img src="../ImageResources/archiveBlue.png" class="icon"> STUDENT ARCHIVE </a></li>
+                <li><a href="../html/Reports.html" class="nav-link logout"><img src="../ImageResources/flagBlue.png" class="icon"> Report </a></li>
+            </ul>
+        </div>
+    </nav>
+    <section>
+        <!--Boxes-->
+        <div class="dashboard-stats">
+            <!--Student-->
+            <div class="stat-box">
+                <div class="stat-header">
+                    <span>Total Students</span>
+                    <img src="../ImageResources/totalstudent.png" alt="Student Icon" class="icon">
+                </div>
+                <div class="stat-value">0</div>
+            </div>
+
+            <!--Quest-->
+            <div class="stat-box">
+                <div class="stat-header">
+                    <span>Total Quest Given</span>
+                    <img src="../ImageResources/questgiven.png" alt="Quest Icon" class="icon">
+                </div>
+                <div class="stat-value">0</div>
+            </div>
+
+            <!--Unkown-->
+            <div class="stat-box">
+                <div class="stat-header">
+                    <span>Completed Quest</span>
+                    <img src="../ImageResources/completedquest.png" alt="Quest Icon" class="icon">
+                </div>
+                <div class="stat-value">0</div>
+            </div>
+        </div>
+    </section>
+    <main>
+        <div class="Activity-Body">
+            <div class="Activities-Box">
+                <h2>Activities</h2>
+                <div class="Toggle-Group">
+                    <button class="Toggle-Buttons">All</button>
+                    <button class="Toggle-Buttons">Unfinished</button>
+                    <button class="Toggle-Buttons Active">Finished</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <aside>
+        <div class="aside-box">
+            <div class="progress-box">
+                <h4>Progress</h2>
+            </div>
+            <div class="given-task">
+                <h4>Given Activities</h2>
+            </div>
+        </div>
+
+    </aside>
+
+    <div class="loader-wrapper">
+        <span class="loader-1"></span>
+    </div>
+    
+    <style>
+        .loader-wrapper {
+            width: 100%;
+            height: 100%;
+            position: fixed; /* Use fixed to cover the entire screen */
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white; /* Add transparency for better visibility */
+            z-index: 9999; /* Ensure it stays on top of other content */
+        }
+    
+        .loader-1 {
+            width: 48px;
+            height: 48px;
+            border: 5px solid rgba(255, 255, 255, 0.16); /* Slightly transparent */
+            border-bottom-color: #1773B8;
+            border-radius: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+        }
+    
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(window).on("load", function () {
+        $(".loader-wrapper").fadeOut(1000, function () { 
+            $(this).remove(); 
+        });
+    });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Table</title>
+    
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="data-table"></tbody>
+    </table>
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js"></script>
+
+    <script>
+        // Firebase Configuration
+        const firebaseConfig = {
+                apiKey: "AIzaSyAPuz2lTQpHSsvp-JG6_Oy4pp1CG-Mp2tc",
+                authDomain: "codequest-e6ca2.firebaseapp.com",
+                projectId: "codequest-e6ca2",
+                storageBucket: "codequest-e6ca2.firebasestorage.app",
+                messagingSenderId: "923468819779",
+                appId: "1:923468819779:web:b81ffa5eed37996e5413f6",
+                measurementId: "G-B70FKVX4TS"
+            };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+
+        // Reference to the database
+        const dataRef = database.ref("users/");
+
+        // Fetch Data and Populate Table
+        dataRef.on("value", (snapshot) => {
+            const tableBody = document.getElementById("data-table");
+            tableBody.innerHTML = ""; // Clear existing rows
+
+            snapshot.forEach((childSnapshot) => {
+                const data = childSnapshot.val();
+                const row = `<tr>
+                                <td>${data.FirstName}</td>
+                                <td>${data.LastName}</td>
+                             </tr>`;
+                tableBody.innerHTML += row;
+            });
+        });
+    </script>
+</body>
+</html>

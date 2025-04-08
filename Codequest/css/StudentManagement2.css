@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #eaf2fb;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .logo {
+    width: 100px;
+    margin-bottom: 50px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar ul li {
+    width: 100%;
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    text-decoration: none;
+    color: #045396;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a.active {
+    background-color: #0056b3;
+    color: #FDF13E;
+}
+
+.sidebar ul li a:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+/* Main Content */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+.student-container {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-details label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.profile-details input {
+    padding: 5px;
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.edit-btn {
+    padding: 10px;
+    background: yellow;
+    color: blue;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.delete-btn {
+    padding: 10px;
+    background: red;
+    color: yellow;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.student-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.student-performance {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.student-performance h2 {
+    color: #0056b3;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background: #0056b3;
+    color: white;
+}
+
+.edit-score-btn {
+    padding: 5px;
+    background: #2196F3;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.student-assessment {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.assessment-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.graph-container {
+    width: 40%;
+}
+
+.assessment-graph {
+    width: 100%;
+}

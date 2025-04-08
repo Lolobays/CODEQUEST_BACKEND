@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Management</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/StudentManagement.css">
+    <script src="../js/StudentManagement.js"> </script>
+</head>
+
+<body>
+
+
+
+    <header>
+        <h2>Student Management</h2>
+    </header>
+    <nav>
+        <div class="sidebar">
+            <img src="../ImageResources/_Logo.png" class="logo">
+            <ul>
+                <li><a href="../html/newDashboard.html" class="nav-link"><img src="../ImageResources/chartblue.png" class="icon"> DASHBOARD </a>
+                </li>
+                <li><a href="../html/StudentManagement2.html" class="nav-link"><img
+                            src="../ImageResources/bookmark_manager.png" class="icon"> MANAGEQUESTS </a></li>
+                <li><a href="../html/StudentManagement.html" class="nav-link active"><img
+                            src="../ImageResources/accountYellow.png" class="icon"> STUDENT MANAGEMENT </a></li>
+                <li><a href="#" class="nav-link"><img src="../ImageResources/archiveBlue.png" class="icon"> STUDENT
+                        ARCHIVE </a></li>
+                <li><a href="Reports.html" class="nav-link logout"><img src="../ImageResources/flagBlue.png" class="icon"> Report
+                    </a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="RegStudent">
+        <h4>
+            REGISTER STUDENT
+        </h4>
+        <div class="form-container">
+            <input type="text" class="fName" id="fName" placeholder="First Name" autocomplete="off" required>
+            <input type="text" class="mName" id="mName" placeholder="Middle Name" autocomplete="off" required>
+            <input type="text" class="lName" id="lName" placeholder="Last Name" autocomplete="off" required>
+            <input type="text" class="sectionList" id="sectionList" placeholder="Section" autocomplete="off" required>
+            <input type="text" class="username" id="username" placeholder="Username" autocomplete="off" required>
+            <input type="password" class="password" id="password" placeholder="Password" autocomplete="off" required>
+            <input type="text" class="studentID" id="studentID" placeholder="Student Number" autocomplete="off" required    >
+            <button class="addBtn"> ADD STUDENT </button>
+        </div>
+    </main>
+
+    <article>
+        <div class="StudentListBody">
+            <div class="StudentList">
+                <h4>
+                    STUDENT LIST
+                </h4>
+                <div class="top-bar">
+                    <div class="SearchBtn">
+                        <input type="text" class="Search-Bar" placeholder="Search">
+                        <img src="../ImageResources/searchIcon.png" class="SearchIcon">
+                    </div>
+                    <button class="downloadBtn">Download Reports</button>
+                </div>
+                
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Student Number</th>
+                            <th>Section</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTable"></tbody>
+                </table>
+            </div>
+            </div>
+        </div>
+        
+    </article>
+    <script type="module" src="../js/addStudent.js"></script>
+
+    <div class="loader-wrapper">
+        <span class="loader-1"></span>
+    </div>
+    
+    <style>
+        .loader-wrapper {
+            width: 100%;
+            height: 100%;
+            position: fixed; /* Use fixed to cover the entire screen */
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            z-index: 9999; /* Ensure it stays on top of other content */
+        }
+    
+        .loader-1 {
+            width: 48px;
+            height: 48px;
+            border: 5px solid rgba(255, 255, 255, 0.16); /* Slightly transparent */
+            border-bottom-color: #1773B8;
+            border-radius: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+        }
+    
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(window).on("load", function () {
+        $(".loader-wrapper").fadeOut(1000, function () { 
+            $(this).remove(); 
+        });
+    });
+    </script>
+
+
+</body>
+
+</html>

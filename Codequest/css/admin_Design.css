@@ -1,0 +1,125 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    background-color: #F5FAFF;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-part {
+    color: #1773B8;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.second-part {
+    color: #FDF13E;
+    font-family: "Poppins", sans-serif;
+
+}
+
+h3{
+    color: #1773B8;
+    justify-content: left;
+    font-family: "Poppins", sans-serif;
+}
+
+img {
+    width: 40%;
+    height: auto; 
+}
+
+.toptitle {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 100%; 
+}
+
+.toptitle img {
+    width: 80px; 
+    height: auto; 
+    display: block;
+}
+
+.square {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    padding: 20px;
+    border-radius: 7%;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.form input {
+    height: 25px;
+    width: 230px; /* Adjusted to accommodate the icon */
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-right: 40px; /* Space for the icon */
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    border-radius: 3px;
+    padding: 0px;
+    line-height: 1;
+   
+}
+
+.input-container input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 0px 8px;
+    margin: 10px;
+    font-size: 16px;
+  
+}
+
+.input-container img {
+    padding: 0px;
+    right: 10px;
+    width: 20px;
+    cursor: pointer;
+}
+
+
+
+.centerbutton {
+    margin-top: 15px;
+}
+
+#buttonLogin {
+    font-family: "Poppins", sans-serif;
+    height: 30px;
+    width: 120px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1773B8;
+    color: #FDF13E;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#buttonLogin:hover {
+    background-color: #5a0090;
+}
